@@ -48,12 +48,12 @@ npm run jira-report
 - JIRA integration is automatic but requires `.env` configuration
 
 ### Pre-requirements
-- Node.js 18.18.0+, axios, dotenv)
-- JIRA account with API token (optional, for automated issue creat
+- Node.js 18.18.0+
 - node-gyp 10.2.0+ (install: `npm install -g node-gyp`)
-- Hoppscotch CLI 0.11.0+ (install: `npm i -g @hoppscotch/cli`)
+- Hoppscotch CLI 0.30.0+ (install: `npm i -g @hoppscotch/cli`)
 - Hoppscotch Desktop 25.12.0
-- Project dependencies: `npm install` (installs xml2js for report conversion)
+- Project dependencies: `npm install` (installs xml2js, axios, dotenv, form-data)
+- JIRA account with API token (optional, for automated issue creation)
 
 ## Project-Specific Conventions
 
@@ -138,7 +138,8 @@ Password reset endpoints (send email, verify token) cannot be automated - requir
 - `convert-report.js`: Node.js script that converts XML to HTML using xml2js
 - Automatically called after test execution via `npm test`
 - Can be run manually with `npm run convert-report`
-JIRA Integration
+
+## JIRA Integration
 
 ### Automated Issue Creation
 The project includes automatic JIRA integration that creates issues when tests fail:

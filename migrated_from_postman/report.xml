@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="165" failures="6" errors="0" time="6.354">
+  <testsuite name="expandtesting/TC001 - Check the health of the API Notes services" time="0.12" timestamp="2026-02-03T23:43:58.440Z" tests="3" failures="0" errors="0">
+    <testcase name="TC001.1 - Check api health success - Expected 'true' to be 'true'" classname="expandtesting/TC001 - Check the health of the API Notes services"/>
+    <testcase name="TC001.2 - Check api health status - Expected '200' to be '200'" classname="expandtesting/TC001 - Check the health of the API Notes services"/>
+    <testcase name="TC001.3 - Check api health message - Expected 'Notes API is Running' to be 'Notes API is Running'" classname="expandtesting/TC001 - Check the health of the API Notes services"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC010 - Creates a new user account" time="0.215" timestamp="2026-02-03T23:43:58.447Z" tests="3" failures="3" errors="0">
+    <testcase name="TC010.1 - Check creates a new user account success - Expected 'false' to be 'true'" classname="expandtesting/TC010 - Creates a new user account">
+      <failure type="AssertionFailure" message="Expected 'false' to be 'true'"/>
+    </testcase>
+    <testcase name="TC010.2 - Check creates a new user account status - Expected '409' to be '201'" classname="expandtesting/TC010 - Creates a new user account">
+      <failure type="AssertionFailure" message="Expected '409' to be '201'"/>
+    </testcase>
+    <testcase name="TC010.3 - Check creates a new user account message - Expected 'An account already exists with the same email address' to be 'User account created successfully'" classname="expandtesting/TC010 - Creates a new user account">
+      <failure type="AssertionFailure" message="Expected 'An account already exists with the same email address' to be 'User account created successfully'"/>
+    </testcase>
+  </testsuite>
+  <testsuite name="expandtesting/TC020 - Creates a new user account  - bad request" time="0.219" timestamp="2026-02-03T23:43:58.448Z" tests="3" failures="0" errors="0">
+    <testcase name="TC020.1 - Check creates a new user account - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC020 - Creates a new user account  - bad request"/>
+    <testcase name="TC020.2 - Check creates a new user account - bad request status - Expected '400' to be '400'" classname="expandtesting/TC020 - Creates a new user account  - bad request"/>
+    <testcase name="TC020.3 - Check creates a new user account - bad request message - Expected 'A valid email address is required' to be 'A valid email address is required'" classname="expandtesting/TC020 - Creates a new user account  - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC030 - Log in as an existing user" time="0.209" timestamp="2026-02-03T23:43:58.448Z" tests="5" failures="0" errors="0">
+    <testcase name="TC030.1 - Check log in as an existing user success - Expected 'true' to be 'true'" classname="expandtesting/TC030 - Log in as an existing user"/>
+    <testcase name="TC030.2 - Check log in as an existing user status - Expected '200' to be '200'" classname="expandtesting/TC030 - Log in as an existing user"/>
+    <testcase name="TC030.3 - Check log in as an existing user message - Expected 'Login successful' to be 'Login successful'" classname="expandtesting/TC030 - Log in as an existing user"/>
+    <testcase name="TC030.4 - Assert user name - Expected '1727 test' to be '1727 test'" classname="expandtesting/TC030 - Log in as an existing user"/>
+    <testcase name="TC030.5 - Assert user e-mail - Expected '1727@test.com' to be '1727@test.com'" classname="expandtesting/TC030 - Log in as an existing user"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC040 - Log in as an existing user - bad request" time="0.195" timestamp="2026-02-03T23:43:58.448Z" tests="3" failures="0" errors="0">
+    <testcase name="TC040.1 - Check log in as an existing user - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC040 - Log in as an existing user - bad request"/>
+    <testcase name="TC040.2 - Check log in as an existing user - bad request status - Expected '400' to be '400'" classname="expandtesting/TC040 - Log in as an existing user - bad request"/>
+    <testcase name="TC040.3 - Check log in as an existing user - bad request message - Expected 'A valid email address is required' to be 'A valid email address is required'" classname="expandtesting/TC040 - Log in as an existing user - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC050 - Log in as an existing user - unauthorized request" time="0.225" timestamp="2026-02-03T23:43:58.448Z" tests="3" failures="0" errors="0">
+    <testcase name="TC050.1 - Check log in as an existing user - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC050 - Log in as an existing user - unauthorized request"/>
+    <testcase name="TC050.2 - Check log in as an existing user - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC050 - Log in as an existing user - unauthorized request"/>
+    <testcase name="TC050.3 - Check log in as an existing user - unauthorized request message - Expected 'Incorrect email address or password' to be 'Incorrect email address or password'" classname="expandtesting/TC050 - Log in as an existing user - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC060 - Retrieve user profile information" time="0.238" timestamp="2026-02-03T23:43:58.448Z" tests="3" failures="0" errors="0">
+    <testcase name="TC060.1 - Check retrieve user profile information success - Expected 'true' to be 'true'" classname="expandtesting/TC060 - Retrieve user profile information"/>
+    <testcase name="TC060.2 - Check retrieve user profile information status - Expected '200' to be '200'" classname="expandtesting/TC060 - Retrieve user profile information"/>
+    <testcase name="TC060.3 - Check retrieve user profile information message - Expected 'Profile successful' to be 'Profile successful'" classname="expandtesting/TC060 - Retrieve user profile information"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC070 - Retrieve user profile information - bad request" time="0.204" timestamp="2026-02-03T23:43:58.449Z" tests="3" failures="0" errors="0">
+    <testcase name="TC070.1 - Check retrieve user profile information - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC070 - Retrieve user profile information - bad request"/>
+    <testcase name="TC070.2 - Check retrieve user profile information - bad request status - Expected '400' to be '400'" classname="expandtesting/TC070 - Retrieve user profile information - bad request"/>
+    <testcase name="TC070.3 - Check retrieve user profile information - bad request message - Expected 'Invalid X-Content-Format header, Only application/json is supported.' to be 'Invalid X-Content-Format header, Only application/json is supported.'" classname="expandtesting/TC070 - Retrieve user profile information - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC080 - Retrieve user profile information - unauthorized request" time="0.203" timestamp="2026-02-03T23:43:58.449Z" tests="3" failures="0" errors="0">
+    <testcase name="TC080.1 - Check retrieve user profile information - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC080 - Retrieve user profile information - unauthorized request"/>
+    <testcase name="TC080.2 - Check retrieve user profile information - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC080 - Retrieve user profile information - unauthorized request"/>
+    <testcase name="TC080.3 - Check retrieve user profile information - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC080 - Retrieve user profile information - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC090 - Update the user profile information" time="0.192" timestamp="2026-02-03T23:43:58.449Z" tests="7" failures="1" errors="0">
+    <testcase name="TC090.1 - Check update the user profile information success - Expected 'true' to be 'true'" classname="expandtesting/TC090 - Update the user profile information"/>
+    <testcase name="TC090.2 - Check update the user profile information status - Expected '200' to be '200'" classname="expandtesting/TC090 - Update the user profile information"/>
+    <testcase name="TC090.3 - Check update the user profile information message - Expected 'Profile updated successful' to be 'Profile updated successful'" classname="expandtesting/TC090 - Update the user profile information"/>
+    <testcase name="TC090.4 - Assert user id - Expected '' to be '69827d51f7461602953c9f5e'" classname="expandtesting/TC090 - Update the user profile information">
+      <failure type="AssertionFailure" message="Expected '' to be '69827d51f7461602953c9f5e'"/>
+    </testcase>
+    <testcase name="TC090.5 - Assert user name - Expected '1000070564 test' to be '1000070564 test'" classname="expandtesting/TC090 - Update the user profile information"/>
+    <testcase name="TC090.6 - Assert user phone - Expected '1000070564' to be '1000070564'" classname="expandtesting/TC090 - Update the user profile information"/>
+    <testcase name="TC090.7 - Assert user company - Expected '1000070564 S.A.' to be '1000070564 S.A.'" classname="expandtesting/TC090 - Update the user profile information"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC100 - Update the user profile information - bad request" time="0.175" timestamp="2026-02-03T23:43:58.449Z" tests="3" failures="0" errors="0">
+    <testcase name="TC100.1 - Check update the user profile information - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC100 - Update the user profile information - bad request"/>
+    <testcase name="TC100.2 - Check update the user profile information - bad request status - Expected '400' to be '400'" classname="expandtesting/TC100 - Update the user profile information - bad request"/>
+    <testcase name="TC100.3 - Check update the user profile information - bad request message - Expected 'User name must be between 4 and 30 characters' to be 'User name must be between 4 and 30 characters'" classname="expandtesting/TC100 - Update the user profile information - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC110 - Update the user profile information - unauthorized request" time="0.207" timestamp="2026-02-03T23:43:58.450Z" tests="3" failures="0" errors="0">
+    <testcase name="TC110.1 - Check update the user profile information - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC110 - Update the user profile information - unauthorized request"/>
+    <testcase name="TC110.2 - Check update the user profile information - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC110 - Update the user profile information - unauthorized request"/>
+    <testcase name="TC110.3 - Check update the user profile information - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC110 - Update the user profile information - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC120 - Change a user's password" time="0.224" timestamp="2026-02-03T23:43:58.450Z" tests="3" failures="0" errors="0">
+    <testcase name="TC120.1 - Check change password success - Expected 'true' to be 'true'" classname="expandtesting/TC120 - Change a user's password"/>
+    <testcase name="TC120.2 - Check change password status - Expected '200' to be '200'" classname="expandtesting/TC120 - Change a user's password"/>
+    <testcase name="TC120.3 - Check change password message - Expected 'The password was successfully updated' to be 'The password was successfully updated'" classname="expandtesting/TC120 - Change a user's password"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC130 - Change a user's password - bad request" time="0.191" timestamp="2026-02-03T23:43:58.450Z" tests="3" failures="0" errors="0">
+    <testcase name="TC130.1 - Check api health - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC130 - Change a user's password - bad request"/>
+    <testcase name="TC130.2 - Check api health - bad request status - Expected '400' to be '400'" classname="expandtesting/TC130 - Change a user's password - bad request"/>
+    <testcase name="TC130.3 - Check api health - bad request message - Expected 'New password must be between 6 and 30 characters' to be 'New password must be between 6 and 30 characters'" classname="expandtesting/TC130 - Change a user's password - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC140 - Change a user's password - unauthorized request" time="0.201" timestamp="2026-02-03T23:43:58.450Z" tests="3" failures="0" errors="0">
+    <testcase name="TC140.1 - Check api health - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC140 - Change a user's password - unauthorized request"/>
+    <testcase name="TC140.2 - Check api health - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC140 - Change a user's password - unauthorized request"/>
+    <testcase name="TC140.3 - Check api health - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC140 - Change a user's password - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC150 - Creates a new note" time="0.226" timestamp="2026-02-03T23:43:58.450Z" tests="7" failures="0" errors="0">
+    <testcase name="TC150.1 - Check creates a new note success - Expected 'true' to be 'true'" classname="expandtesting/TC150 - Creates a new note"/>
+    <testcase name="TC150.2 - Check creates a new note status - Expected '200' to be '200'" classname="expandtesting/TC150 - Creates a new note"/>
+    <testcase name="TC150.3 - Check creates a new note message - Expected 'Note successfully created' to be 'Note successfully created'" classname="expandtesting/TC150 - Creates a new note"/>
+    <testcase name="TC150.4 - Assert note title - Expected '1886 title' to be '1886 title'" classname="expandtesting/TC150 - Creates a new note"/>
+    <testcase name="TC150.5 - Assert note description - Expected '1886 description' to be '1886 description'" classname="expandtesting/TC150 - Creates a new note"/>
+    <testcase name="TC150.6 - Assert note category - Expected 'Personal' to be 'Personal'" classname="expandtesting/TC150 - Creates a new note"/>
+    <testcase name="TC150.7 - Assert user id - Expected '69828809f7461602953cba56' to be '69828809f7461602953cba56'" classname="expandtesting/TC150 - Creates a new note"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC160 - Creates a new note - bad request" time="0.21" timestamp="2026-02-03T23:43:58.450Z" tests="3" failures="0" errors="0">
+    <testcase name="TC160.1 - Check creates a new note - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC160 - Creates a new note - bad request"/>
+    <testcase name="TC160.2 - Check creates a new note - bad request status - Expected '400' to be '400'" classname="expandtesting/TC160 - Creates a new note - bad request"/>
+    <testcase name="TC160.3 - Check creates a new note - bad request message - Expected 'Category must be one of the categories: Home, Work, Personal' to be 'Category must be one of the categories: Home, Work, Personal'" classname="expandtesting/TC160 - Creates a new note - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC170 - Creates a new note - unauthorized request" time="0.201" timestamp="2026-02-03T23:43:58.450Z" tests="3" failures="0" errors="0">
+    <testcase name="TC170.1 - Check creates a new note - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC170 - Creates a new note - unauthorized request"/>
+    <testcase name="TC170.2 - Check creates a new note - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC170 - Creates a new note - unauthorized request"/>
+    <testcase name="TC170.3 - Check creates a new note - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC170 - Creates a new note - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC190 - Get all notes" time="0.2" timestamp="2026-02-03T23:43:58.451Z" tests="19" failures="0" errors="0">
+    <testcase name="TC190.1 - Check get all notes success - Expected 'true' to be 'true'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.2 - Check get all notes status - Expected '200' to be '200'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.3 - Check get all notes message - Expected 'Notes successfully retrieved' to be 'Notes successfully retrieved'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.4 - Assert note id - Expected '69828813f7461602953cba72' to be '69828813f7461602953cba72'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.5 - Assert note title - Expected '1496 title' to be '1496 title'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.6 - Assert note description - Expected '1496 description' to be '1496 description'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.7 - Assert note category - Expected 'Work' to be 'Work'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.8 - Assert note completed - Expected 'false' to be 'false'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.9 - Assert note created_at - Expected '2026-02-03T23:43:15.691Z' to be '2026-02-03T23:43:15.691Z'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.10 - Assert note updated_at - Expected '2026-02-03T23:43:15.691Z' to be '2026-02-03T23:43:15.691Z'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.11 - Assert user id for note - Expected '69828809f7461602953cba56' to be '69828809f7461602953cba56'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.12 - Assert note 2 id - Expected '69828813f7461602953cba76' to be '69828813f7461602953cba76'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.13 - Assert note 2 title - Expected '2203 title' to be '2203 title'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.14 - Assert note 2 description - Expected '2203 description' to be '2203 description'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.15 - Assert note 2 category - Expected 'Personal' to be 'Personal'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.16 - Assert note 2 completed - Expected 'false' to be 'false'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.17 - Assert note 2 created_at - Expected '2026-02-03T23:43:15.979Z' to be '2026-02-03T23:43:15.979Z'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.18 - Assert note 2 updated_at - Expected '2026-02-03T23:43:15.979Z' to be '2026-02-03T23:43:15.979Z'" classname="expandtesting/TC190 - Get all notes"/>
+    <testcase name="TC190.19 - Assert user id for note 2 - Expected '69828809f7461602953cba56' to be '69828809f7461602953cba56'" classname="expandtesting/TC190 - Get all notes"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC200 - Get all notes - bad request" time="0.198" timestamp="2026-02-03T23:43:58.451Z" tests="3" failures="0" errors="0">
+    <testcase name="TC200.1 - Check get all notes - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC200 - Get all notes - bad request"/>
+    <testcase name="TC200.2 - Check get all notes - bad request status - Expected '400' to be '400'" classname="expandtesting/TC200 - Get all notes - bad request"/>
+    <testcase name="TC200.3 - Check get all notes - bad request message - Expected 'Invalid X-Content-Format header, Only application/json is supported.' to be 'Invalid X-Content-Format header, Only application/json is supported.'" classname="expandtesting/TC200 - Get all notes - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC210 - Get all notes - unauthorized request" time="0.173" timestamp="2026-02-03T23:43:58.451Z" tests="3" failures="0" errors="0">
+    <testcase name="TC210.1 - Check get all notes - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC210 - Get all notes - unauthorized request"/>
+    <testcase name="TC210.2 - Check get all notes - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC210 - Get all notes - unauthorized request"/>
+    <testcase name="TC210.3 - Check get all notes - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC210 - Get all notes - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC220 - Get note by ID" time="0.133" timestamp="2026-02-03T23:43:58.451Z" tests="11" failures="0" errors="0">
+    <testcase name="TC220.1 - Check get note by ID success - Expected 'true' to be 'true'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.2 - Check get note by ID status - Expected '200' to be '200'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.3 - Check get note by ID message - Expected 'Note successfully retrieved' to be 'Note successfully retrieved'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.4 - Assert note id - Expected '6982881af7461602953cba91' to be '6982881af7461602953cba91'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.5 - Assert note title - Expected '1987 title' to be '1987 title'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.6 - Assert note description - Expected '1987 description' to be '1987 description'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.7 - Assert note category - Expected 'Personal' to be 'Personal'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.8 - Assert note completed - Expected 'false' to be 'false'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.9 - Assert note created_at - Expected '2026-02-03T23:43:22.751Z' to be '2026-02-03T23:43:22.751Z'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.10 - Assert note updated_at - Expected '2026-02-03T23:43:22.751Z' to be '2026-02-03T23:43:22.751Z'" classname="expandtesting/TC220 - Get note by ID"/>
+    <testcase name="TC220.11 - Assert user id for note - Expected '69828809f7461602953cba56' to be '69828809f7461602953cba56'" classname="expandtesting/TC220 - Get note by ID"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC230 - Get note by ID - bad request" time="0.122" timestamp="2026-02-03T23:43:58.451Z" tests="3" failures="0" errors="0">
+    <testcase name="TC230.1 - Check get note by ID - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC230 - Get note by ID - bad request"/>
+    <testcase name="TC230.2 - Check get note by ID - bad request status - Expected '400' to be '400'" classname="expandtesting/TC230 - Get note by ID - bad request"/>
+    <testcase name="TC230.3 - Check get note by ID - bad request message - Expected 'Invalid X-Content-Format header, Only application/json is supported.' to be 'Invalid X-Content-Format header, Only application/json is supported.'" classname="expandtesting/TC230 - Get note by ID - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC240 - Get note by ID - unauthorized request" time="0.117" timestamp="2026-02-03T23:43:58.451Z" tests="3" failures="0" errors="0">
+    <testcase name="TC240.1 - Check get note by ID - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC240 - Get note by ID - unauthorized request"/>
+    <testcase name="TC240.2 - Check get note by ID - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC240 - Get note by ID - unauthorized request"/>
+    <testcase name="TC240.3 - Check get note by ID - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC240 - Get note by ID - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC250 - Update an existing note" time="0.132" timestamp="2026-02-03T23:43:58.451Z" tests="10" failures="0" errors="0">
+    <testcase name="TC250.1 - Check update an existing note success - Expected 'true' to be 'true'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.2 - Check update an existing note status - Expected '200' to be '200'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.3 - Check update an existing note message - Expected 'Note successfully Updated' to be 'Note successfully Updated'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.4 - Assert note id - Expected '69828821f7461602953cbaaa' to be '69828821f7461602953cbaaa'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.5 - Assert note title - Expected '1021 title' to be '1021 title'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.6 - Assert note description - Expected '1021 description' to be '1021 description'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.7 - Assert note category - Expected 'Home' to be 'Home'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.8 - Assert note completed - Expected 'false' to be 'false'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.9 - Assert note created_at - Expected '2026-02-03T23:43:29.138Z' to be '2026-02-03T23:43:29.138Z'" classname="expandtesting/TC250 - Update an existing note"/>
+    <testcase name="TC250.10 - Assert user id for note - Expected '6982881ef7461602953cba9c' to be '6982881ef7461602953cba9c'" classname="expandtesting/TC250 - Update an existing note"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC260 - Update an existing note - bad request" time="0.106" timestamp="2026-02-03T23:43:58.451Z" tests="3" failures="0" errors="0">
+    <testcase name="TC260.1 - Check update an existing note - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC260 - Update an existing note - bad request"/>
+    <testcase name="TC260.2 - Check update an existing note - bad request status - Expected '400' to be '400'" classname="expandtesting/TC260 - Update an existing note - bad request"/>
+    <testcase name="TC260.3 - Check update an existing note - bad request message - Expected 'Category must be one of the categories: Home, Work, Personal' to be 'Category must be one of the categories: Home, Work, Personal'" classname="expandtesting/TC260 - Update an existing note - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC270 - Update an existing note - unauthorized request" time="0.114" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC270.1 - Check update an existing note - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC270 - Update an existing note - unauthorized request"/>
+    <testcase name="TC270.2 - Check update an existing note - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC270 - Update an existing note - unauthorized request"/>
+    <testcase name="TC270.3 - Check update an existing note - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC270 - Update an existing note - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC280 - Update the completed status of a note" time="0.11" timestamp="2026-02-03T23:43:58.452Z" tests="10" failures="0" errors="0">
+    <testcase name="TC280.1 - Check update the completed status of a note success - Expected 'true' to be 'true'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.2 - Check update the completed status of a note status - Expected '200' to be '200'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.3 - Check update the completed status of a note message - Expected 'Note successfully Updated' to be 'Note successfully Updated'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.4 - Assert note id - Expected '69828827f7461602953cbac4' to be '69828827f7461602953cbac4'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.5 - Assert note title - Expected '1944 title' to be '1944 title'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.6 - Assert note description - Expected '1944 description' to be '1944 description'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.7 - Assert note category - Expected 'Personal' to be 'Personal'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.8 - Assert note completed - Expected 'false' to be 'false'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.9 - Assert note created_at - Expected '2026-02-03T23:43:35.349Z' to be '2026-02-03T23:43:35.349Z'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+    <testcase name="TC280.10 - Assert user id for note - Expected '69828826f7461602953cbabc' to be '69828826f7461602953cbabc'" classname="expandtesting/TC280 - Update the completed status of a note"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC290 - Update the completed status of a note - bad request" time="0.104" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC290.1 - Check update the completed status of a note - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC290 - Update the completed status of a note - bad request"/>
+    <testcase name="TC290.2 - Check update the completed status of a note - bad request status - Expected '400' to be '400'" classname="expandtesting/TC290 - Update the completed status of a note - bad request"/>
+    <testcase name="TC290.3 - Check update the completed status of a note - bad request message - Expected 'Note completed status must be boolean' to be 'Note completed status must be boolean'" classname="expandtesting/TC290 - Update the completed status of a note - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC300 - Update the completed status of a note - unauthorized request" time="0.142" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC300.1 - Check update the completed status of a note - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC300 - Update the completed status of a note - unauthorized request"/>
+    <testcase name="TC300.2 - Check update the completed status of a note - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC300 - Update the completed status of a note - unauthorized request"/>
+    <testcase name="TC300.3 - Check update the completed status of a note - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC300 - Update the completed status of a note - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC310 - Delete a note by ID - bad request" time="0.109" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC310.1 - Check delete a note by ID - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC310 - Delete a note by ID - bad request"/>
+    <testcase name="TC310.2 - Check delete a note by ID - bad request status - Expected '400' to be '400'" classname="expandtesting/TC310 - Delete a note by ID - bad request"/>
+    <testcase name="TC310.3 - Check delete a note by ID - bad request message - Expected 'Note ID must be a valid ID' to be 'Note ID must be a valid ID'" classname="expandtesting/TC310 - Delete a note by ID - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC320 - Delete a note by ID - unauthorized request" time="0.121" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC320.1 - Check delete a note by ID - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC320 - Delete a note by ID - unauthorized request"/>
+    <testcase name="TC320.2 - Check delete a note by ID - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC320 - Delete a note by ID - unauthorized request"/>
+    <testcase name="TC320.3 - Check delete a note by ID - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC320 - Delete a note by ID - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC330 - Delete a note by ID" time="0.113" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC330.1 - Check delete a note by ID success - Expected 'true' to be 'true'" classname="expandtesting/TC330 - Delete a note by ID"/>
+    <testcase name="TC330.2 - Check delete a note by ID status - Expected '200' to be '200'" classname="expandtesting/TC330 - Delete a note by ID"/>
+    <testcase name="TC330.3 - Check delete a note by ID message - Expected 'Note successfully deleted' to be 'Note successfully deleted'" classname="expandtesting/TC330 - Delete a note by ID"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC340 - Log out a user - bad request" time="0.128" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC340.1 - Check log out a user - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC340 - Log out a user - bad request"/>
+    <testcase name="TC340.2 - Check log out a user - bad request status - Expected '400' to be '400'" classname="expandtesting/TC340 - Log out a user - bad request"/>
+    <testcase name="TC340.3 - Check log out a user - bad request message - Expected 'Invalid X-Content-Format header, Only application/json is supported.' to be 'Invalid X-Content-Format header, Only application/json is supported.'" classname="expandtesting/TC340 - Log out a user - bad request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC350 - Log out a user - unauthorized request" time="0.132" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC350.1 - Check log out a user - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC350 - Log out a user - unauthorized request"/>
+    <testcase name="TC350.2 - Check log out a user - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC350 - Log out a user - unauthorized request"/>
+    <testcase name="TC350.3 - Check log out a user - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC350 - Log out a user - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC360 - Log out a user" time="0.122" timestamp="2026-02-03T23:43:58.452Z" tests="3" failures="0" errors="0">
+    <testcase name="TC360.1 - Check log out a user success - Expected 'true' to be 'true'" classname="expandtesting/TC360 - Log out a user"/>
+    <testcase name="TC360.2 - Check log out a user status - Expected '200' to be '200'" classname="expandtesting/TC360 - Log out a user"/>
+    <testcase name="TC360.3 - Check log out a user message - Expected 'User has been successfully logged out' to be 'User has been successfully logged out'" classname="expandtesting/TC360 - Log out a user"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC380 - Delete user account - bad request" time="0.108" timestamp="2026-02-03T23:43:58.453Z" tests="3" failures="2" errors="0">
+    <testcase name="TC380.1 - Check delete user account - bad request success - Expected 'false' to be 'false'" classname="expandtesting/TC380 - Delete user account - bad request"/>
+    <testcase name="TC380.2 - Check delete user account - bad request status - Expected '401' to be '400'" classname="expandtesting/TC380 - Delete user account - bad request">
+      <failure type="AssertionFailure" message="Expected '401' to be '400'"/>
+    </testcase>
+    <testcase name="TC380.3 - Check delete user account - bad request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Invalid X-Content-Format header, Only application/json is supported.'" classname="expandtesting/TC380 - Delete user account - bad request">
+      <failure type="AssertionFailure" message="Expected 'Access token is not valid or has expired, you will need to login' to be 'Invalid X-Content-Format header, Only application/json is supported.'"/>
+    </testcase>
+  </testsuite>
+  <testsuite name="expandtesting/TC390 - Delete user account - unauthorized request" time="0.109" timestamp="2026-02-03T23:43:58.453Z" tests="3" failures="0" errors="0">
+    <testcase name="TC390.1 - Check delete user account - unauthorized request success - Expected 'false' to be 'false'" classname="expandtesting/TC390 - Delete user account - unauthorized request"/>
+    <testcase name="TC390.2 - Check delete user account - unauthorized request status - Expected '401' to be '401'" classname="expandtesting/TC390 - Delete user account - unauthorized request"/>
+    <testcase name="TC390.3 - Check delete user account - unauthorized request message - Expected 'Access token is not valid or has expired, you will need to login' to be 'Access token is not valid or has expired, you will need to login'" classname="expandtesting/TC390 - Delete user account - unauthorized request"/>
+  </testsuite>
+  <testsuite name="expandtesting/TC400 - Delete user account" time="0.106" timestamp="2026-02-03T23:43:58.453Z" tests="3" failures="0" errors="0">
+    <testcase name="TC400.1 - TC380 - Check delete user account success - Expected 'true' to be 'true'" classname="expandtesting/TC400 - Delete user account"/>
+    <testcase name="TC400.2 - TC380 - Check delete user account status - Expected '200' to be '200'" classname="expandtesting/TC400 - Delete user account"/>
+    <testcase name="TC400.3 - TC380 - Check delete user account message - Expected 'Account successfully deleted' to be 'Account successfully deleted'" classname="expandtesting/TC400 - Delete user account"/>
+  </testsuite>
+</testsuites>

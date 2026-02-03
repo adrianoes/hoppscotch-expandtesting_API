@@ -1,0 +1,127 @@
+{
+  "v": 1,
+  "id": "expandtesting-hoppscotch-env",
+  "name": "expandtesting_env",
+  "variables": [
+    {
+      "key": "base_url",
+      "value": "https://practice.expandtesting.com/notes/api",
+      "secret": false
+    },
+    {
+      "key": "user_id",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "user_name",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "user_email",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "user_password",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "user_token",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "user_phone",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "user_company",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_id",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_title",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_description",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_category",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_completed",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_created_at",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_updated_at",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_id_2",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_title_2",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_description_2",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_category_2",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_completed_2",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_created_at_2",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "note_updated_at_2",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "randomValue",
+      "value": "",
+      "secret": false
+    },
+    {
+      "key": "new_user_password",
+      "value": "",
+      "secret": false
+    }
+  ]
+}
