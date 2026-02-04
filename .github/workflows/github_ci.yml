@@ -26,6 +26,18 @@ jobs:
         run: hopp test -e expandtesting_env.json -d 1000 expandtesting.json --reporter-junit ./reports/report.xml
         continue-on-error: true
 
+      - name: Step 5.1 DEBUG - List files in project root
+        run: ls -la
+        if: always()
+
+      - name: Step 5.2 DEBUG - Check reports directory
+        run: ls -la reports/ || echo "reports directory is empty or missing"
+        if: always()
+
+      - name: Step 5.3 DEBUG - Check if XML exists
+        run: test -f reports/report.xml && echo "✓ XML file exists" || echo "✗ XML file NOT found"
+        if: always()
+
       - name: Step 6 Convert XML to HTML
         run: node convert-report.js
         if: always()
