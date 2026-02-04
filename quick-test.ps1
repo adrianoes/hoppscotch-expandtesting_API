@@ -14,7 +14,7 @@ param(
 # Configuração
 $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 $env = Join-Path $scriptPath "expandtesting_env.json"
-$collection = Join-Path $scriptPath "migrated_from_postman\expandtesting_independent.json"
+$collection = Join-Path $scriptPath "expandtesting.json"
 $delay = 1000
 $report = Join-Path $scriptPath "reports\report.xml"
 

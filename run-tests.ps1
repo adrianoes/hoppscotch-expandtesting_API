@@ -29,11 +29,7 @@ $envFile = Join-Path $scriptPath "expandtesting_env.json"
 $reportFile = Join-Path $scriptPath "reports\report.xml"
 $tempDir = Join-Path $scriptPath "temp_tests"
 
-if ($Collection -eq 'root') {
-    $collectionFile = Join-Path $scriptPath "expandtesting.json"
-} else {
-    $collectionFile = Join-Path $scriptPath "migrated_from_postman\expandtesting_independent.json"
-}
+$collectionFile = Join-Path $scriptPath "expandtesting.json"
 
 if (-not (Test-Path $collectionFile)) {
     Write-Host "Error: $collectionFile not found!" -ForegroundColor Red
