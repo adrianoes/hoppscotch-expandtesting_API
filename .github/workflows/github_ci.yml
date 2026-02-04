@@ -10,6 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Step 0 Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Step 1 Install node-gyp
         run: npm install -g node-gyp@10.2.0
 
