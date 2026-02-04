@@ -28,9 +28,19 @@ API testing in [expandtesting](https://practice.expandtesting.com/notes/api/api-
 # Tests:
 
 - Execute ```npm test``` to run all tests, generate XML/HTML reports, and automatically create JIRA issues if tests fail.
-- Execute ```hopp test -e expandtesting_env.json -d 1000 expandtesting.json --reporter-junit ./reports/report.xml``` to execute expandtesting.json collection configured with expandtesting_env.json environment variable file and export a report.xml file to reports folder.
+- Execute ```hopp test -e expandtesting_env.json -d 1000 expandtesting_independent.json --reporter-junit ./reports/report.xml``` to execute expandtesting_independent.json collection with expandtesting_env.json environment variables and export a report.xml file to reports folder.
 - Execute ```npm run convert-report``` to convert an existing XML report to HTML format.
 - Execute ```npm run jira-report``` to manually create a JIRA issue from the last test results (if failures exist).
+- Execute ```.\quick-test.ps1 TC001``` to run specific test TC001.
+- Execute ```.\quick-test.ps1 TC090``` to run specific test TC090.
+- Execute ```.\quick-test.ps1 all``` to run all tests with quick-test.ps1.
+- Execute ```.\quick-test.ps1 neg``` to run only negative tests (bad request + unauthorized).
+- Execute ```.\quick-test.ps1 pos``` to run only positive tests (happy path).
+- Execute ```.\run-tests.ps1 -TestCase TC001``` to run a single test with full control.
+- Execute ```.\run-tests.ps1 -Multiple TC001,TC010,TC020``` to run multiple specific tests.
+- Execute ```.\run-tests.ps1 -Negative``` to run all negative tests with run-tests.ps1.
+- Execute ```.\run-tests.ps1 -Positive``` to run all positive tests with run-tests.ps1.
+- Execute ```.\run-tests.ps1 -TestCase TC001 -Delay 2000``` to run test with custom delay between requests.
 
 # Support:
 

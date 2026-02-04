@@ -1,122 +1,19 @@
 {
-  "v": 1,
-  "id": "5pb687pal4f",
+  "id": "expandtesting-hoppscotch-env",
+  "v": 2,
   "name": "expandtesting_env",
   "variables": [
     {
       "key": "base_url",
-      "value": "https://practice.expandtesting.com/notes/api",
-      "secret": false
-    },
-    {
-      "key": "user_name",
-      "value": "1592 test",
-      "secret": false
-    },
-    {
-      "key": "user_email",
-      "value": "1592@test.com",
-      "secret": false
-    },
-    {
-      "key": "user_id",
-      "value": "66eade4ec99d1a014d4e76b1",
-      "secret": false
-    },
-    {
-      "key": "user_password",
-      "value": "1592_pw",
-      "secret": false
-    },
-    {
-      "key": "user_token",
-      "value": "109641d2c2d843b7a9117045f00b6809704eb435820741bfb0b27a595d271786",
-      "secret": false
-    },
-    {
-      "key": "user_phone",
-      "value": "1000063600",
-      "secret": false
-    },
-    {
-      "key": "user_company",
-      "value": "1000063600 S.A.",
-      "secret": false
-    },
-    {
-      "key": "note_category",
-      "value": "Work",
-      "secret": false
-    },
-    {
-      "key": "note_title",
-      "value": "1958 title",
-      "secret": false
-    },
-    {
-      "key": "note_description",
-      "value": "1958 description",
-      "secret": false
-    },
-    {
-      "key": "note_id",
-      "value": "66eadf48c99d1a014d4e76df",
-      "secret": false
-    },
-    {
-      "key": "note_completed",
-      "value": "false",
-      "secret": false
-    },
-    {
-      "key": "note_created_at",
-      "value": "2024-09-18T14:10:16.130Z",
-      "secret": false
-    },
-    {
-      "key": "note_updated_at",
-      "value": "2024-09-18T14:10:16.130Z",
-      "secret": false
-    },
-    {
-      "key": "randomValue",
-      "value": "1958",
-      "secret": false
+      "secret": false,
+      "initialValue": "https://practice.expandtesting.com/notes/api",
+      "currentValue": "https://practice.expandtesting.com/notes/api"
     },
     {
       "key": "new_user_password",
-      "value": "1089_new_pw",
-      "secret": false
-    },
-    {
-      "key": "note_category_2",
-      "value": "Home",
-      "secret": false
-    },
-    {
-      "key": "note_description_2",
-      "value": "1172 description",
-      "secret": false
-    },
-    {
-      "key": "note_title_2",
-      "value": "1172 title",
-      "secret": false
-    },
-    {
-      "key": "note_id_2",
-      "value": "66eadf92c99d1a014d4e76ed",
-      "secret": false
-    },
-    {
-      "key": "note_created_at_2",
-      "value": "2024-09-18T14:11:30.804Z",
-      "secret": false
-    },
-    {
-      "key": "note_updated_at_2",
-      "value": "2024-09-18T14:11:30.804Z",
-      "secret": false
+      "secret": false,
+      "initialValue": "5825_newpw",
+      "currentValue": "5279_newpw"
     }
   ]
 }
