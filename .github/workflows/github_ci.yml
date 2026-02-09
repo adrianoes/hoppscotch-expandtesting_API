@@ -21,14 +21,14 @@ jobs:
       - name: Step 2 Install Hoppscotch CLI (specific version)
         run: npm i -g @hoppscotch/cli@0.30.0
 
-      - name: Step 2.1 DEBUG - Verify collection file exists and is readable
-        run: test -f expandtesting.json && echo "✓ Collection file exists" && wc -l expandtesting.json || echo "✗ Collection file NOT found"
+      # - name: Step 2.1 DEBUG - Verify collection file exists and is readable
+      #   run: test -f expandtesting.json && echo "✓ Collection file exists" && wc -l expandtesting.json || echo "✗ Collection file NOT found"
 
-      - name: Step 2.2 DEBUG - Show first 50 lines of collection
-        run: head -50 expandtesting.json
+      # - name: Step 2.2 DEBUG - Show first 50 lines of collection
+      #   run: head -50 expandtesting.json
 
-      - name: Step 2.3 DEBUG - Validate JSON format
-        run: node -e "JSON.parse(require('fs').readFileSync('expandtesting.json', 'utf8'))" && echo "✓ JSON is valid" || echo "✗ JSON is invalid"
+      # - name: Step 2.3 DEBUG - Validate JSON format
+      #   run: node -e "JSON.parse(require('fs').readFileSync('expandtesting.json', 'utf8'))" && echo "✓ JSON is valid" || echo "✗ JSON is invalid"
 
       - name: Step 3 Ensure reports directory exists
         run: mkdir -p reports
@@ -36,25 +36,22 @@ jobs:
       - name: Step 4 Install project dependencies
         run: npm install
 
-      - name: Step 5 Run tests (generate XML)
-        run: hopp test -e expandtesting_env.json -d 1000 expandtesting.json --reporter-junit ./reports/report.xml
+      - name: Step 5 Run tests via runner
+        run: pwsh -File ./runner.ps1 -all -cr
         continue-on-error: true
 
-      - name: Step 5.1 DEBUG - List files in project root
-        run: ls -la
-        if: always()
+      # - name: Step 5.1 DEBUG - List files in project root
+      #   run: ls -la
+      #   if: always()
 
-      - name: Step 5.2 DEBUG - Check reports directory
-        run: ls -la reports/ || echo "reports directory is empty or missing"
-        if: always()
+      # - name: Step 5.2 DEBUG - Check reports directory
+      #   run: ls -la reports/ || echo "reports directory is empty or missing"
+      #   if: always()
 
-      - name: Step 5.3 DEBUG - Check if XML exists
-        run: test -f reports/report.xml && echo "✓ XML file exists" || echo "✗ XML file NOT found"
-        if: always()
+      # - name: Step 5.3 DEBUG - Check if XML exists
+      #   run: test -f reports/report.xml && echo "✓ XML file exists" || echo "✗ XML file NOT found"
+      #   if: always()
 
-      - name: Step 6 Convert XML to HTML
-        run: node convert-report.js
-        if: always()
 
       - name: Step 7 Upload test reports (XML + HTML)
         uses: actions/upload-artifact@v4
